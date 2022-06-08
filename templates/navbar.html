@@ -16,7 +16,7 @@
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'activities' %}">Activities</a></li>
                 {%  if request.user.is_authenticated %}
-                <li><a href="{% url 'profile' %}">Profile</a></li> 
+               
                 <li><a href="{% url 'account' %}">account</a></li> 
                 <li><a href="{% url 'logout' %}">logout</a></li> 
                 {% else%}
