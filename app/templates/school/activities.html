@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<section id="subject">
+   
+    <h1>OUR ACTIVITIES</h1>
+    <div class="search">
+    <div class="hero-section__box">
+        <h2>Search for <span>Activities</span></h2>
+      </div>
+    <div class="hero-section__search">
+        <form class="form" action="#" method="get">
+          <div class="form__field">
+            <label for="formInput#search">Search By Projects </label>
+            <input class="input input--text" id="formInput#search" type="text" name="text"
+              placeholder="Search by Activities Title" />
+          </div>
+
+          <input class="btn btn--sub btn--lg" type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+    <article class="sub">
+        {%for activity in activities %}
+        
+        <div class="cont"><a href="{% url 'activity' activity.id %}">
+            <div class="title  world"><h2>{{activity.title}}</h2></div>
+            <div class="cont2">
+               
+                <div>
+                    <ul>
+                        <h5>{{activity.sub_title}}</h5>
+                        <li>{{activity.line_one}}</li>
+                        <li>{{activity.line_two}}</li>
+                        <li>{{activity.line_three}}</li>
+                        <li>{{activity.line_four}}</li>
+                        <li>{{activity.line_five}}</li>
+                        <li>{{activity.line_six}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="{{activity.featured_image.url}}"/>
+                </div>
+            </div>
+        </a>
+        </div>
+        {% endfor %}
+    </article>
+</section>
+
+{% endblock content %}

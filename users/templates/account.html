@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="full-screen-container">
+
+    <div class="login-container">
+        <a class="tag tag--pill tag--main settings__btn" href="{% url 'edit-account' %}"><i class="im im-edit"></i> Edit</a>
+     <h3>{{profile.name}}</h3>
+     <h3>{{profile.username}}</h3>
+     <h3>{{profile.child_name}}</h3>     
+     <h3>{{profile.child_age}}</h3>     
+     <img src="{{profile.profile_image.url}}"/>     
+     <img src="{{profile.profile_image.url}}"/>     
+         
+
+    </div>
+  </div>
+
+{% endblock content %}

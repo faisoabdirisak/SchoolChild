@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="full-screen-container">
+    <div class="login-container">
+       <!-- <i class="fas fa-chevron-left prev-btn"></i> -->
+      <h3 class="login-title">Welcome</h3>
+      <a class="backButton" href="{% url 'account' %}"><i class="im im-angle-left"></i></a>
+      <form method="POST" action="{% url 'edit-account' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="input-group">
+          <label>{{field.label}}</label>
+          {{field}}
+        </div>
+        {% endfor %}
+        <!-- <div class="input-group">
+          <label>Password</label>
+          <input type="password">
+        </div> -->
+        <button type="submit" class="login-button">submit</button>
+      </form>
+{% endblock content %}

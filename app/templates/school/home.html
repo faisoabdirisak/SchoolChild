@@ -1,0 +1,197 @@
+{% extends 'main.html' %}
+
+
+
+{% block content %}
+
+<section>
+   
+    <div class="slider">
+        {% for slider in sliders%}
+        <div class="slide active">
+          <img src="{{slider.one_image.url}}" alt="">
+          <div class="info">
+            <h2>{{slider.title}}</h2>
+            <p>{{slider.sub_title}}.</p>
+          </div>
+        </div>
+    
+        {% endfor %}
+        <!-- <div class="slide">
+          <img src="static/images/pics6.jpg" alt="">
+          <div class="info">
+            <h2>Tropical Desert</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="static/images/pics3.jpg" alt="">
+          <div class="info">
+            <h2>Steaming Volcanoes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="static/images/pics7.jpg" alt="">
+          <div class="info">
+            <h2>Mountain River</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="static/images/pics9.jpg" alt="">
+          <div class="info">
+            <h2>Egypt Pyramids</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div> -->
+        <div class="navigation">
+          <i class="fas fa-chevron-left prev-btn"></i>
+          <i class="fas fa-chevron-right next-btn"></i>
+        </div>
+        <div class="navigation-visibility">
+          <div class="slide-icon active"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+          <div class="slide-icon"></div>
+        </div>
+      </div>
+    </section> 
+
+
+<!-- counter -->
+<section class="count">
+
+    <div class="box-container">
+ 
+       <div class="box">
+          <i class="fas fa-graduation-cap"></i>
+          <div class="content">
+             <h3>150+</h3>
+             <p>courses</p>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <i class="fas fa-user-graduate"></i>
+          <div class="content">
+             <h3>1300+</h3>
+             <p>children</p>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <i class="fas fa-chalkboard-user"></i>
+          <div class="content">
+             <h3>80+</h3>
+             <p>teachers</p>
+          </div>
+       </div>
+ 
+       <div class="box">
+          <i class="fas fa-face-smile"></i>
+          <div class="content">
+             <h3>100%</h3>
+             <p>satisfaction</p>
+          </div>
+       </div>
+ 
+    </div>
+ 
+ </section>
+
+
+
+
+  
+
+
+    <section class="about" id="about">
+        {% for item in abouts %}
+        <h1><span id="child">{{item.title}}</span></h1>
+        <h3>{{item.sub_title}}</h3>
+
+        <div class="row">
+     
+           <div class="image">
+              <img src="{{item.about_image.url}}" alt="">
+           </div>
+     
+           <div class="content">
+              <h3>{{item.another_title}}</h3>
+              <p>
+                {{item.description}}
+              </p>
+              
+           </div>
+     
+        </div>
+     {% endfor %}
+     </section>
+
+
+     <section class="contact" id="contact">
+
+        <h1 class="heading"><span id="school">contact</span>US</h1>
+        <h3 class="title">we love conversatios, lets talk.</h3>
+        
+        <div class="row">
+        {% for item in contact %}
+            <div class="image">
+                <img src="{{item.contact_image.url}}" alt="">
+            </div>
+            {% endfor %}
+        
+            <div class="form-container">
+                <form action="">
+                    <input type="text" placeholder="full name">
+                    <input type="email" placeholder="enter your email">
+                    <input type="number" placeholder="phone">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+                    <input type="submit" value="message">
+                </form>
+            </div>
+        
+        </div>
+        
+        </section>
+
+
+
+        <!-- footer -->
+        <footer>
+            <div class="footer-content">
+                <h3>Early Childhood Education</h3>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text.
+                It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+                </p>
+            </div>
+        
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+             </ul>
+             <div class="footer-bottom">
+                <p>copyright &copy;2021  SchoolChild.com </p>
+                <div class="footer-menu">
+                    <ul class="f-menu">
+                       <li><a href="">Home</a></li>
+                       <li><a href="">About</a></li>
+                       <li><a href="">Contact</a></li>
+                       <li><a href="">Subjects</a></li>
+                    </ul>
+                   </div>
+             </div>
+        
+            
+             
+        </footer>
+        
+    
+
+
+{% endblock content %}
