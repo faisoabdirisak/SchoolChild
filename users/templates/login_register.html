@@ -4,8 +4,7 @@
 {% if page == 'register' %}
 <div class="full-screen-container">
     <div class="login-container">
-       <!-- <i class="fas fa-chevron-left prev-btn"></i> -->
-      <h3 class="login-title">Welcome</h3>
+      <h3 class="login-title">Register User</h3>
       <form method="POST" action="{% url 'register' %}">
         {% csrf_token %}
         {% for field in form %}
@@ -33,8 +32,8 @@
 
   <div class="full-screen-container">
     <div class="login-container">
-       <i class="fas fa-chevron-left prev-btn"></i>
-      <h3 class="login-title">Welcome</h3>
+       <!-- <i class="fas fa-chevron-left prev-btn"></i> -->
+      <h3 class="login-title">Login User</h3>
       <form action="{% url 'login' %}" method="POST">
         {% csrf_token %}
         <div class="input-group">

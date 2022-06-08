@@ -1,11 +1,12 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<div class="full-screen-container">
+<div class="faiso">
     <div class="login-container">
-       <!-- <i class="fas fa-chevron-left prev-btn"></i> -->
-      <h3 class="login-title">Welcome</h3>
-      <a class="backButton" href="{% url 'account' %}"><i class="im im-angle-left"></i></a>
+     
+      
+      <a class="backButton" href="{% url 'account' %}"><i class="fas fa-chevron-left prev-btn"></i></a>
+      <h3 class="login-title">Edit Your Profile Details</h3>
       <form method="POST" action="{% url 'edit-account' %}" enctype="multipart/form-data">
         {% csrf_token %}
         {% for field in form %}
