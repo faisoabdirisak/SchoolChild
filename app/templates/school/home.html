@@ -107,55 +107,28 @@
   
 
 
-    <section class="about" id="about">
-        {% for item in abouts %}
-        <h1><span id="child">{{item.title}}</span></h1>
-        <h3>{{item.sub_title}}</h3>
+ <section class="about" id="about">
+   <h1 id="About">ABOUT <span id="act">US</span></h1>
+ 
+   <div class="row">
 
-        <div class="row">
-     
-           <div class="image">
-              <img src="{{item.about_image.url}}" alt="">
-           </div>
-     
-           <div class="content">
-              <h3>{{item.another_title}}</h3>
-              <p>
-                {{item.description}}
-              </p>
-              
-           </div>
-     
-        </div>
-     {% endfor %}
-     </section>
-
-
-     <section class="contact" id="contact">
-
-        <h1 class="heading"><span id="world">contact Us</span></h1>
-        <h3 class="title">we love conversatios, lets talk.</h3>
-        
-        <div class="row">
-        {% for item in contact %}
-            <div class="image">
-                <img src="{{item.contact_image.url}}" alt="">
-            </div>
-            {% endfor %}
-        
-            <div class="form-container">
-                <form action="">
-                    <input type="text" placeholder="full name">
-                    <input type="email" placeholder="enter your email">
-                    <input type="number" placeholder="phone">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="message"></textarea>
-                    <input type="submit" value="message">
-                </form>
-            </div>
-        
-        </div>
-        
-        </section>
+      <div class="image">
+         <img src="{% static 'images/about3-removebg-preview_16.png'%}" alt="">
+      </div>
+ 
+      <div class="content">
+         <h3>why choose us?</h3>
+         <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam magni error, aut enim rerum?
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam magni error, aut enim rerum?
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quibusdam magni error, aut enim rerum?
+         </p>
+         
+      </div>
+ 
+   </div>
+ 
+ </section>
         <!-- map -->
         <section>
           
