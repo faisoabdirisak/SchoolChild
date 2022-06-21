@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
 from .forms import CustomUserCreationForm,ProfileForm
+from django.contrib import messages
 # Create your views here.
 def profile(request):
     profile=Profile.objects.all()

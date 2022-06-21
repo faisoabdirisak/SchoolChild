@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from app.models import Activities, About, Contact, Sliders
 
 # Create your views here.
@@ -23,3 +24,8 @@ def activity(request,pk):
     activityObj=Activities.objects.get(id=pk)
     context={'activity':activityObj}
     return render(request, 'school/detail-activity.html', context)
+
+
+@login_required(login_url="login")
+def next(request):
+    return render(request, 'school/next.html')

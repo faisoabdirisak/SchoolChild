@@ -147,3 +147,15 @@ slider.addEventListener("mouseover", () => {
 slider.addEventListener("mouseout", () => {
   repeater();
 });
+
+
+
+let alertWrapper=document.querySelector('.alert');
+let alertClose=document.querySelector('.alert__close');
+
+if(alertWrapper){
+  // console.log('alert Wrapper clicked')
+  alertClose.addEventListener('click', ()=>
+    alertWrapper.style.display='none'
+  )
+}

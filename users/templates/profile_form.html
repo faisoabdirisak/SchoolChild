@@ -1,10 +1,8 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<div class="faiso">
-    <div class="login-container">
-     
-      
+<div class="full-screen-container">
+    <div class="faisoo">
       <a class="backButton" href="{% url 'account' %}"><i class="fas fa-chevron-left prev-btn"></i></a>
       <h3 class="login-title">Edit Your Profile Details</h3>
       <form method="POST" action="{% url 'edit-account' %}" enctype="multipart/form-data">
